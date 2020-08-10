@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dashboard_recyclerview"
+        android:layout_width="410dp"
+        android:layout_height="0dp"
+        android:fadingEdge="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_complaint"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+
+        android:layout_marginBottom="28dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:overScrollMode="ifContentScrolls"
+        app:backgroundTint="#F50E5B"
+        app:elevation="55dp"
+        app:fabSize="normal"
+        app:hoveredFocusedTranslationZ="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dashboard_recyclerview"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="@+id/dashboard_recyclerview"
+        app:srcCompat="@drawable/ic_fab_add" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

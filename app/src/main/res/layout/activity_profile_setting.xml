@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSetting">
+
+    <ScrollView
+        android:id="@+id/svProfile"
+        android:layout_width="match_parent"
+        android:layout_height="676dp"
+        android:layout_above="@+id/bottomNavigationView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0sp"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="10sp"
+                tools:layout_editor_absoluteY="1dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfilePicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="162dp"
+                    android:background="@drawable/profile_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.54"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="?android:attr/listDivider" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etStudentDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etStudentId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="7sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginBottom="3sp"
+                    android:layout_weight="9"
+                    android:ems="10"
+                    android:hint="Colllege ID"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="5sp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="Stream"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rbDiploma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5sp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Diploma" />
+
+                <RadioButton
+                    android:id="@+id/rbDegree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5sp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="Degree" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etStudentTelno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:hint="Your Phone Number"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etStudentParentTelnr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:hint="Parents Phone Number"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/etStudentRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:hint="Hostel Room number"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etStudentBranch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:hint="Branch"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etStudentPermanentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="3sp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Permanent Address"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/btnSubmit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="7sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="20sp"
+                android:text="Submit" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llProfileSet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfilePicture3"
+            android:layout_width="wrap_content"
+            android:layout_height="162dp"
+            android:layout_gravity="center"
+            android:background="@drawable/profile_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_gravity="center"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10sp"
+            android:background="#F7195B"
+            android:fontFamily="casual"
+            android:gravity="center"
+            android:text="Your profile is  set"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_editProfile"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:text="Edit Profile" />
+
+        <LinearLayout
+            android:id="@+id/editLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginBottom="15sp"
+                android:gravity="start"
+                android:text="Note : Please click save button to update profile"
+                android:textColor="#DDEC1313"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="10sp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_profileedit_room"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:hint=" Click here to edit Room Number "
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_editRoom"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_weight=".5"
+                    app:srcCompat="@drawable/ic_save_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="10sp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_profileedit_branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:hint="Click here to edit Branch              "
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_editBranch"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_weight=".5"
+                    app:srcCompat="@drawable/ic_save_24dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginEnd="10sp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_profileedit_telnr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:hint="Click here to edit Phone Number"
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_editPhoneNumber"
+                    android:layout_width="50sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginRight="5sp"
+                    android:layout_weight=".5"
+                    app:srcCompat="@drawable/ic_save_24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="677dp" />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

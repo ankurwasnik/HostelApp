@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HostelApp</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_complaint">Complaint</string>
+    <string name="menu_setting">Settings</string>
+    <string name="menu_dashboard">Dashboard</string>
+
+</resources>
